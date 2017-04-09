@@ -1,4 +1,4 @@
-baseURL = "http://blog.jqiu.io"
+baseURL = "http://blog.jqiu.io/"
 languageCode = "en-US"
 title = "Ask the right question"
 theme = "casper"
