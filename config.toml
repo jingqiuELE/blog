@@ -1,5 +1,23 @@
 baseURL = "http://blog.jqiu.io"
 languageCode = "en-US"
 title = "Ask the right question"
-theme = "hugo_theme_robust"
+theme = "casper"
+
+[[menu.main]]
+  identifier = "blog"
+  name = "Blog"
+  weight = -120
+  url = "/"
+
+[[menu.main]]
+  name = "About me"
+  weight = -110
+  identifier = "about"
+  url = "/about"
+
+[params]
+author = "Jing Qiu"
+authorlocation = "Shanghai, China"
+googleAnalyticsUserID = "UA-79101-12"
+hideHUGOSupport = false
 
