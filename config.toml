@@ -1,3 +1,5 @@
 baseURL = "http://blog.jqiu.io"
 languageCode = "en-US"
 title = "Ask the right question"
+theme = "hugo_theme_robust"
+
