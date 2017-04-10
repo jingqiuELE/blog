@@ -1,23 +1,24 @@
 baseURL = "http://blog.jqiu.io/"
 languageCode = "en-US"
-title = "Ask the right question"
-theme = "casper"
+title = "Jing's memo"
+theme = "hemingway2"
 
-[[menu.main]]
-  identifier = "blog"
-  name = "Blog"
-  weight = -120
-  url = "/"
+keywords = ["keyword1", "keyword2"]
 
-[[menu.main]]
-  name = "About me"
-  weight = -110
-  identifier = "about"
-  url = "/about"
+[taxonomies]
+tag = "tags"
+category = "categories"
 
 [params]
-author = "Jing Qiu"
-authorlocation = "Shanghai, China"
-googleAnalyticsUserID = "UA-79101-12"
-hideHUGOSupport = false
 
+[params.highlight]
+style = "github"
+languages = ["go", "dockerfile"]
+
+[[params.social]]
+url = "https://github.com/jingqiuELE"
+fa_icon = "fa-github"
+
+[[params.social]]
+url = "/index.xml"
+fa_icon = "fa-rss"
