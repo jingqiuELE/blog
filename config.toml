@@ -1,4 +1,4 @@
-baseURL = "http://blog.jqiu.io/"
+baseURL = "https://blog.jqiu.io"
 languageCode = "en-US"
 title = "Jing's memo"
 theme = "hemingway2"
