@@ -47,7 +47,8 @@ To reproduce the issue, I run openwrt:master on a WR703N device, and follow belo
     [  421.571293] ---[ end trace 782b40067d1ca4ff ]---
     [  421.575915] jffs2_rmdir: dir_i->i_nlink is -1
 
-The problem is caused by the incorrect handling of the parent inode's i_nlink count for the dentry to be RENAME_EXCHANGED. There are 3 cases to consider. Assume we want to RENAME_EXCHANGE struct dentry *a and struct dentry *b, and inode_a is pointed to by dentry_a, inode_b is pointed to by dentry_b:  
+The problem is caused by the incorrect handling of the parent inode's i_nlink count for the dentry to be RENAME_EXCHANGED. There are 3 cases to consider:  
+Assume we want to RENAME_EXCHANGE struct dentry *a and struct dentry *b, and inode_a is pointed to by dentry_a, inode_b is pointed to by dentry_b:  
   1. If inode_a is a directory, but inode_b isn't, then the i_nlink count of old_dir_i must be decreased, whereas the i_nlink of new_dir_i must be increased.  
   2. If inode_a isn't a directory, but inode_b is a directory, then the i_nlink of old_dir_i must be increased, whereas the i_nlink count of new_dir_i must be decreased.  
   3. If the types of inode_a and inode_b are the same, don't change the i_nlink for either old_dir_i or new_dir_i.  
