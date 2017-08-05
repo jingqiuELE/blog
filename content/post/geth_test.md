@@ -74,16 +74,16 @@ Steps:
 ```
 
 6. Check the block chain after mining:  
-  * Get the latest block number:
-```javascript
+  * Get the latest block number:  
+  ```javascript
         >eth.blockNumber()
-```
+  ```
   * Show the block information for any particular block:
-```javascript
+  ```javascript
         >eth.getBlock(blockNum)
-```
-    example:
-```javascript
+  ```
+  example:
+  ```javascript
         {
           difficulty: 133900,
           extraData: "0xce9e5448ce9ed0af535048ce9ed0afce9e",
@@ -108,7 +108,7 @@ Steps:
           transactionsRoot: "0x56e81f171bcc55a6ff8345e692c0f86e5b48e01b996cadc001622fb5e363b421",
           uncles: []
         }
-```
+  ```
 
 7. Unlock primary account for gas to trasact:
 ```javascript
