@@ -13,9 +13,9 @@ https://github.com/ethereum/go-ethereum
 ## Experiments
 Steps:  
 1. Initialize the blockchain:
-```javascript
-    $geth --datadir=/private_data_dir init genesis.json
-    $cat genesis.json
+```bash
+  $geth --datadir=/private_data_dir init genesis.json
+  $cat genesis.json
     {
       "config": {
             "chainId": 0,
