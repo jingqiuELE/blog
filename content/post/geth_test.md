@@ -73,16 +73,16 @@ Steps:
     >miner.stop()
 ```
 
-6. Check the block chain after mining:
-        1. Get the latest block number:
+6. Check the block chain after mining:  
+  * Get the latest block number:
 ```javascript
         >eth.blockNumber()
 ```
-        2. Show the block information for any particular block:
+  * Show the block information for any particular block:
 ```javascript
         >eth.getBlock(blockNum)
 ```
-        example:
+    example:
 ```javascript
         {
           difficulty: 133900,
