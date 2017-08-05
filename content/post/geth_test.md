@@ -43,18 +43,18 @@ Steps:
 ```
 
 2. Generate a boot.key:
-```javascript
+```bash
     $bootnode --genkey=boot.key
 ```
 
 3. Start the bootnode:
-```javascript
+```bash
     $bootnode --nodekey=boot.key
 ```
     Above command would output the enode url.
 
 4. Start the geth node with console:
-```javascript
+```bash
     $geth --datadir=private_data_dir --bootnodes=enode:<enode_url> console
 ```
 
