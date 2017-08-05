@@ -75,40 +75,38 @@ Steps:
 
 6. Check the block chain after mining:  
   * Get the latest block number:  
-  ```javascript
-        >eth.blockNumber()
-  ```
-  * Show the block information for any particular block:
-  ```javascript
-        >eth.getBlock(blockNum)
-  ```
-  example:
-  ```javascript
-        {
-          difficulty: 133900,
-          extraData: "0xce9e5448ce9ed0af535048ce9ed0afce9e",
-          gasLimit: 3298641,
-          gasUsed: 0,
-          hash: "0xac13cdcb7e8f3613c0dfd1369d726ebf3b16a3f1705dc3baae3586b79c08f241",
-          logsBloom: "0x000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000
-        0000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000
-        0000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000",
-          miner: "0x64f65d182f5a944814402ce645fcee380b3ed461",
-          mixHash: "0x406a266c0cfd820e4257056cc1619ca3863063096a42144f84f3350448dc33e9",
-          nonce: "0x6d01c6f02d4c493f",
-          number: 50,                                                                                                                                                                         [1/1197]
-          parentHash: "0xd4fe323983329729d67a7656c9008577adfcc88bb587fcdd51db1f591e045903",
-          receiptsRoot: "0x56e81f171bcc55a6ff8345e692c0f86e5b48e01b996cadc001622fb5e363b421",
-          sha3Uncles: "0x1dcc4de8dec75d7aab85b567b6ccd41ad312451b948a7413f0a142fd40d49347",
-          size: 528,
-          stateRoot: "0xff3438c7a6c8b56d9f6c5af95df428a8faf1136553bdc6184656d72698f69e08",
-          timestamp: 1501896834,
-          totalDifficulty: 6756914,
-          transactions: [],
-          transactionsRoot: "0x56e81f171bcc55a6ff8345e692c0f86e5b48e01b996cadc001622fb5e363b421",
-          uncles: []
-        }
-  ```
+```javascript
+   >eth.blockNumber()
+```
+
+  * Show the block information for any particular block:  
+```javascript
+   >eth.getBlock(50)
+  {
+    difficulty: 133900,
+    extraData: "0xce9e5448ce9ed0af535048ce9ed0afce9e",
+    gasLimit: 3298641,
+    gasUsed: 0,
+    hash: "0xac13cdcb7e8f3613c0dfd1369d726ebf3b16a3f1705dc3baae3586b79c08f241",
+    logsBloom: "0x000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000
+  0000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000
+  0000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000",
+    miner: "0x64f65d182f5a944814402ce645fcee380b3ed461",
+    mixHash: "0x406a266c0cfd820e4257056cc1619ca3863063096a42144f84f3350448dc33e9",
+    nonce: "0x6d01c6f02d4c493f",
+    number: 50,                                                                                                                                                                         [1/1197]
+    parentHash: "0xd4fe323983329729d67a7656c9008577adfcc88bb587fcdd51db1f591e045903",
+    receiptsRoot: "0x56e81f171bcc55a6ff8345e692c0f86e5b48e01b996cadc001622fb5e363b421",
+    sha3Uncles: "0x1dcc4de8dec75d7aab85b567b6ccd41ad312451b948a7413f0a142fd40d49347",
+    size: 528,
+    stateRoot: "0xff3438c7a6c8b56d9f6c5af95df428a8faf1136553bdc6184656d72698f69e08",
+    timestamp: 1501896834,
+    totalDifficulty: 6756914,
+    transactions: [],
+    transactionsRoot: "0x56e81f171bcc55a6ff8345e692c0f86e5b48e01b996cadc001622fb5e363b421",
+    uncles: []
+  }
+```
 
 7. Unlock primary account for gas to trasact:
 ```javascript
@@ -116,5 +114,5 @@ Steps:
 ```
 
 ## Observation
-	The miner would add a new block to the blockchain every few seconds, even if there is no pending
-	transactions.
+The miner would add a new block to the blockchain every few seconds, even if there is no pending
+transactions.
