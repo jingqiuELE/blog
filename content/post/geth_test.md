@@ -11,9 +11,9 @@ Official documents:
 https://github.com/ethereum/go-ethereum
 
 ## Experiments
-Steps:
-    * Initialize the blockchain:
-    ```
+Steps:  
+1. Initialize the blockchain:
+```javascript
     $geth --datadir=/private_data_dir init genesis.json
     $cat genesis.json
     {
@@ -40,50 +40,50 @@ Steps:
       "parentHash" : "0x0000000000000000000000000000000000000000000000000000000000000000",
       "timestamp"  : "0x00"
     }
-    ```
+```
 
-    * Generate a boot.key:
-    ```
+2. Generate a boot.key:
+```javascript
     $bootnode --genkey=boot.key
-    ```
+```
 
-    * Start the bootnode:
-    ```
+3. Start the bootnode:
+```javascript
     $bootnode --nodekey=boot.key
-    ```
+```
     Above command would output the enode url.
 
-    * Start the geth node with console:
-    ```
+4. Start the geth node with console:
+```javascript
     $geth --datadir=private_data_dir --bootnodes=enode://enode_url console
-    ```
+```
 
-    * Start the miner:
+5. Start the miner:
     in the geth console, start CPU miner which uses 1 thread:
-    ```
+```javascript
     >miner.start(1)
-    ```
+```
     Once the miner is started, it will mine blocks to your primary account. Veryfy that the account balance 
     is increasing with miner mined new blocks:
-    ```
+```javascript
     >web3.fromWei(eth.getBalance(eth.coinbase), "ether")
-    ```
+```
     You can stop the miner after it has mined some blocks:
-    ```
+```javascript
     >miner.stop()
-    ```
+```
 
-    * Check the block chain after mining:
+6. Check the block chain after mining:
         1. Get the latest block number:
-        ```
+```javascript
         >eth.blockNumber()
-        ```
+```
         2. Show the block information for any particular block:
-        ```
+```javascript
         >eth.getBlock(blockNum)
-        ```
+```
         example:
-        ```
+```javascript
         {
           difficulty: 133900,
           extraData: "0xce9e5448ce9ed0af535048ce9ed0afce9e",
@@ -108,12 +108,13 @@ Steps:
           transactionsRoot: "0x56e81f171bcc55a6ff8345e692c0f86e5b48e01b996cadc001622fb5e363b421",
           uncles: []
         }
-        ```
+```
 
-    * Unlock primary account for gas to trasact:
-    ```
+7. Unlock primary account for gas to trasact:
+```javascript
     personal.unlockAccount(eth.coinbase)
-    ```
+```
+
 ## Observation
 	The miner would add a new block to the blockchain every few seconds, even if there is no pending
 	transactions.
