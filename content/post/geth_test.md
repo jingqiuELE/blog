@@ -55,7 +55,7 @@ Steps:
 
 4. Start the geth node with console:
 ```javascript
-    $geth --datadir=private_data_dir --bootnodes=enode://enode_url console
+    $geth --datadir=private_data_dir --bootnodes=enode:<enode_url> console
 ```
 
 5. Start the miner:
