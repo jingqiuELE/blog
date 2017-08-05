@@ -1,14 +1,16 @@
 +++
 date = "2017-08-05T08:19:59+08:00"
-draft = true
+draft = false
 title = "Use geth to create private ethereum blockchain"
 
 +++
-
+## Purpose
 I decided to experience ethereum blockchain and smart contract by building a private blockchain using geth, 
 because this is the most controllable way for me to understand the details.
 Official documents:
 https://github.com/ethereum/go-ethereum
+
+## Experiments
 Steps:
     * Initialize the blockchain:
     ```
@@ -112,3 +114,6 @@ Steps:
     ```
     personal.unlockAccount(eth.coinbase)
     ```
+## Observation
+	The miner would add a new block to the blockchain every few seconds, even if there is no pending
+	transactions.
