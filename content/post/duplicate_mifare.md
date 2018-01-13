@@ -1,7 +1,6 @@
-+++  
-date = "2018-01-13T23:12:59+08:00"  
-draft = false  
-title = "duplicate mifare classic 1k card"  
++++
+date = "2018-01-13T15:12:59+08:00"
+title = "duplicate mifare classic 1k card"
 +++
 
 ### Hardware
