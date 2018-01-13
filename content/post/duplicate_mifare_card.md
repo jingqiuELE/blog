@@ -24,8 +24,8 @@ title = "duplicate mifare classic 1k card"
 
 ### Commands
    See Reference:  
-     * https://firefart.at/post/how-to-crack-mifare-classic-cards/
-     * https://github.com/cirias/blog/blob/master/content/mifare-cracking.md
+   * https://firefart.at/post/how-to-crack-mifare-classic-cards/
+   * https://github.com/cirias/blog/blob/master/content/mifare-cracking.md
 
 ### Experiment
    The access system here is a mifare classic 1k card. It took less than 5 minutes to crack it and make a copy.
